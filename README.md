@@ -4,7 +4,7 @@ A modern, responsive personal portfolio showcasing my projects, skills, and jour
 
 ## Live Demo
 
-**Portfolio:** https://shanxmnsr.github.io/Portfolio/
+**Portfolio:** https://portfolio-lake-seven-90aynrp8ym.vercel.app/
 
 ---
 
