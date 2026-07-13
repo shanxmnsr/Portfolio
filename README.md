@@ -1,4 +1,4 @@
-# Shania Mansoori — Portfolio
+# Shania — Portfolio
 
 A modern, responsive personal portfolio showcasing my projects, skills, and journey as a Full Stack Developer.
 
@@ -67,30 +67,6 @@ Portfolio/
 ├── images/
 └── README.md
 ```
-
----
-
-## Running Locally
-
-1. Clone the repository.
-
-```bash
-git clone https://github.com/shanxmnsr/Portfolio.git
-```
-
-2. Open the project folder.
-
-3. Open `index.html` in your browser or use the Live Server extension in Visual Studio Code.
-
----
-
-## Connect With Me
-
-* GitHub: https://github.com/shanxmnsr
-* LinkedIn: *(Add your LinkedIn profile URL here)*
-* Email: *(Add your professional email here)*
-
----
 
 ## License
 
