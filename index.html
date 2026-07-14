@@ -10,7 +10,7 @@
 <meta name="author" content="Shania" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#16151F" />
-<link rel="canonical" href="https://shania.dev/" /> <!-- TODO: replace with real domain -->
+<link rel="canonical" href="https://portfolio-lake-seven-90aynrp8ym.vercel.app/" />
  
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -749,8 +749,18 @@ footer{border-top:1px solid var(--stroke);padding-block:3rem 2rem;margin-top:cla
 }
 </style>
 </head>
+
+
  
 <body>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+  publicKey: "gGO-I0pCT1jHMokuI",
+});
+</script>
  
 <!-- ============ LOADER ============ -->
 <div id="loader" aria-hidden="true">
@@ -1278,7 +1288,7 @@ const finePointer = matchMedia('(pointer: fine)').matches;
   // streamed "answer" — chunked like an LLM response
   const stream=$('#stream');
   const tokens=['A ','full-stack ','&amp; ','AI ','developer ',
-                {t:'who ships ',k:true},{t:'real products',k:true},' — fast.'];
+    {t:'who ships ',k:true},{t:'real products',k:true},' — fast.'];
   const caretHTML='<span class="caret"></span>';
  
   function render(str){ stream.innerHTML=str+caretHTML; }
@@ -1441,14 +1451,57 @@ if(finePointer && !reduce){
 /* =====================================================================
    Contact form -> mailto compose (no backend)
    ===================================================================== */
-$('#contactForm').addEventListener('submit',function(e){
+// $('#contactForm').addEventListener('submit',function(e){
+//   e.preventDefault();
+//   const name=$('#cf-name').value.trim(), email=$('#cf-email').value.trim(), message=$('#cf-msg').value.trim();
+//   if(!name||!email||!message){ window.__toast('Please fill in every field'); return; }
+//   const subject=encodeURIComponent(`Portfolio enquiry from ${name}`);
+//   const body=encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
+//   window.location.href=`mailto:shaniabca2024@gmail.com?subject=${subject}&body=${body}`;
+//   window.__toast('Opening your mail app…');
+// });
+
+
+$('#contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
-  const name=$('#cf-name').value.trim(), email=$('#cf-email').value.trim(), message=$('#cf-msg').value.trim();
-  if(!name||!email||!message){ window.__toast('Please fill in every field'); return; }
-  const subject=encodeURIComponent(`Portfolio enquiry from ${name}`);
-  const body=encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-  window.location.href=`mailto:shaniabca2024@gmail.com?subject=${subject}&body=${body}`;
-  window.__toast('Opening your mail app…');
+
+  const name = $('#cf-name').value.trim();
+  const email = $('#cf-email').value.trim();
+  const message = $('#cf-msg').value.trim();
+
+  if (!name || !email || !message) {
+    window.__toast('Please fill in every field');
+    return;
+  }
+
+  const button = this.querySelector('button[type="submit"]');
+  const originalText = button.innerHTML;
+
+  button.disabled = true;
+  button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+  try {
+    await emailjs.send(
+      "service_xly4dj9",
+      "template_kgq7s6h",
+      {
+        name,
+        email,
+        message
+      }
+    );
+
+    window.__toast("Message sent successfully!");
+    this.reset();
+
+  } catch (error) {
+  console.error("EmailJS Error:", error);
+  alert(`Status: ${error.status}\nMessage: ${error.text}`);
+  window.__toast("Failed to send message.");
+} finally {
+    button.disabled = false;
+    button.innerHTML = originalText;
+  }
 });
  
 /* =====================================================================
