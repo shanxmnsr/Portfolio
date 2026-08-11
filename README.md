@@ -43,17 +43,13 @@ I'm a final-year BCA student at Jamia Hamdard University who enjoys building mod
 
 A secure cloud storage application built with Next.js, Clerk authentication, Drizzle ORM, Neon PostgreSQL, and ImageKit.
 
-### BlinkAI
+### ChatFlow
 
-A real-time AI chat application with streaming responses powered by Groq and Llama models.
+A real-time one-to-one chat application built with React, Socket.IO, Node.js, and Express, featuring live messaging, online users, typing indicators, and an AI Companion powered by Groq and Redis.
 
 ### ResumeAI Tailor
 
 An AI-powered resume optimization tool that improves resumes based on job descriptions and ATS best practices.
-
-### TubeNotes
-
-An AI application that generates concise summaries from YouTube videos using transcript processing and large language models.
 
 ---
 

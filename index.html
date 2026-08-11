@@ -63,7 +63,7 @@
           "LLM",
           "Groq API"
         ],
-        "sameAs": ["https://github.com/shanxmnsr"]
+        "sameAs": ["https://github.com/shaniabuilds"]
       }
     </script>
 
@@ -2053,51 +2053,123 @@
             <!-- <span class="eyebrow"><span class="tok">~/</span>work</span> -->
             <h2 class="section-title">Things I've built</h2>
             <p>
-              Four products, each shipped end to end. Problem, build, and the
+              Three products, each shipped end to end. Problem, build, and the
               stack that made it work.
             </p>
           </div>
 
           <div class="projects">
-            <!-- BlinkAI -->
+            <!-- ChatFlow -->
             <article class="project reveal" data-tilt>
               <div class="p-visual">
                 <img
-                  src="images/blinkai.png"
-                  alt="BlinkAI streaming chat app screenshot"
+                  src="images/chatFlow.png"
+                  alt="ChatFlow real-time chat application screenshot"
                   loading="lazy"
                   onerror="
                     this.replaceWith(
                       Object.assign(document.createElement('div'), {
                         className: 'placeholder',
-                        textContent: 'Add screenshot: images/blinkai.png',
+                        textContent: 'Add screenshot: images/chatFlow.png',
                       }),
                     )
                   "
                 />
               </div>
+
               <div class="p-body">
-                <span class="p-tag">AI · Real-time</span>
-                <h3 class="p-title">BlinkAI</h3>
-                <div class="p-role">Streaming AI chat application</div>
+                <span class="p-tag">Real-time · AI</span>
+                <h3 class="p-title">ChatFlow</h3>
+                <div class="p-role">Real-time one-to-one chat application</div>
+
                 <p class="p-blurb">
-                  A stateless AI chat that streams responses token by token —
-                  with typing indicators, message animations, and buttery
-                  auto-scroll.
+                  A real-time one-to-one chat application with instant
+                  messaging, live online users, typing indicators, and an AI
+                  Companion that joins the conversation when no other users are
+                  online.
+                </p>
+
+                <div class="p-meta">
+                  <!-- <div class="row"><b>Problem</b><span>Users need instant, interactive communication without waiting for messages to refresh.</span></div> -->
+                  <!-- <div class="row"><b>Built</b><span>Real-time messaging with Socket.IO, AI responses powered by Groq, and Redis-based caching and rate limiting.</span></div> -->
+                </div>
+
+                <div class="pills">
+                  <span class="pill">React</span>
+                  <span class="pill">Node.js</span>
+                  <span class="pill">Socket.IO</span>
+                  <span class="pill">Redis</span>
+                  <span class="pill">Groq API</span>
+                </div>
+
+                <div class="p-links">
+                  <a
+                    href="https://chat-flow-cyan.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="primary"
+                    data-ripple
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>Live
+                    demo
+                  </a>
+
+                  <a
+                    href="https://github.com/shaniabuilds/ChatFlow"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-ripple
+                  >
+                    <i class="fa-brands fa-github"></i>Source
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ResumeAI Tailor -->
+            <article class="project reveal" data-tilt>
+              <!-- <div class="p-visual" aria-hidden="true">
+          <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
+            <rect class="m-float" x="70" y="52" width="120" height="150" rx="10" fill="var(--surface-2)" stroke="var(--iris)" stroke-width="2.5"/>
+            <line x1="88" y1="78" x2="172" y2="78" stroke="var(--stroke-strong)" stroke-width="3"/>
+            <line x1="88" y1="98" x2="150" y2="98" stroke="var(--stroke-strong)" stroke-width="3"/>
+            <line x1="88" y1="118" x2="168" y2="118" stroke="var(--iris-2)" stroke-width="3"/>
+            <line x1="88" y1="138" x2="140" y2="138" stroke="var(--stroke-strong)" stroke-width="3"/>
+            <line x1="88" y1="158" x2="164" y2="158" stroke="var(--stroke-strong)" stroke-width="3"/>
+            <circle cx="228" cy="150" r="42" fill="none" stroke="var(--stroke)" stroke-width="8"/>
+            <circle class="m-ring" cx="228" cy="150" r="42" fill="none" stroke="var(--mint)" stroke-width="8" stroke-linecap="round" transform="rotate(-90 228 150)" style="--fill:21"/>
+            <text x="228" y="156" text-anchor="middle" font-family="Space Mono, monospace" font-size="20" font-weight="700" fill="var(--text)">92</text>
+          </svg>
+        </div> -->
+              <div class="p-visual">
+                <img
+                  src="images/resumeai.png"
+                  alt="ResumeAI Tailor Screenshot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-body">
+                <span class="p-tag">AI · Productivity</span>
+                <h3 class="p-title">ResumeAI Tailor</h3>
+                <div class="p-role">AI resume optimizer</div>
+                <p class="p-blurb">
+                  Upload a resume, get an ATS-compatibility score and rewritten
+                  content tailored to the exact job you're chasing — then
+                  download the polished PDF.
                 </p>
                 <div class="p-meta">
-                  <!-- <div class="row"><b>Problem</b><span>Chat that waits for a full response feels slow and dead. Users want to watch the answer arrive.</span></div> -->
-                  <!-- <div class="row"><b>Built</b><span>Real-time response streaming over the Groq API for near-instant replies, plus a clean, minimal UI tuned for fast, focused interactions.</span></div> -->
+                  <!-- <div class="row"><b>Problem</b><span>Generic resumes get filtered out by ATS. Tailoring one by hand for every role is tedious and error-prone.</span></div> -->
+                  <!-- <div class="row"><b>Built</b><span>PDF upload and text extraction, LLM-driven analysis with actionable suggestions, and downloadable optimized-PDF generation — powered by Groq.</span></div> -->
                 </div>
                 <div class="pills">
                   <span class="pill">Next.js</span
-                  ><span class="pill">Groq API</span
+                  ><span class="pill">TypeScript</span
                   ><span class="pill">Tailwind CSS</span
-                  ><span class="pill">React Markdown</span>
+                  ><span class="pill">Groq API</span>
                 </div>
                 <div class="p-links">
                   <a
-                    href="https://blink-ai-sigma.vercel.app/"
+                    href="https://resume-ai-tailor.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="primary"
@@ -2106,7 +2178,7 @@
                     demo</a
                   >
                   <a
-                    href="https://github.com/shanxmnsr/blinkai"
+                    href="https://github.com/shaniabuilds/resumeAI_tailor"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-ripple
@@ -2167,7 +2239,7 @@
                     demo</a
                   >
                   <a
-                    href="https://github.com/shanxmnsr/droply"
+                    href="https://github.com/shaniabuilds/droply"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-ripple
@@ -2177,67 +2249,7 @@
               </div>
             </article>
 
-            <!-- ResumeAI Tailor -->
-            <article class="project reveal" data-tilt>
-              <!-- <div class="p-visual" aria-hidden="true">
-          <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
-            <rect class="m-float" x="70" y="52" width="120" height="150" rx="10" fill="var(--surface-2)" stroke="var(--iris)" stroke-width="2.5"/>
-            <line x1="88" y1="78" x2="172" y2="78" stroke="var(--stroke-strong)" stroke-width="3"/>
-            <line x1="88" y1="98" x2="150" y2="98" stroke="var(--stroke-strong)" stroke-width="3"/>
-            <line x1="88" y1="118" x2="168" y2="118" stroke="var(--iris-2)" stroke-width="3"/>
-            <line x1="88" y1="138" x2="140" y2="138" stroke="var(--stroke-strong)" stroke-width="3"/>
-            <line x1="88" y1="158" x2="164" y2="158" stroke="var(--stroke-strong)" stroke-width="3"/>
-            <circle cx="228" cy="150" r="42" fill="none" stroke="var(--stroke)" stroke-width="8"/>
-            <circle class="m-ring" cx="228" cy="150" r="42" fill="none" stroke="var(--mint)" stroke-width="8" stroke-linecap="round" transform="rotate(-90 228 150)" style="--fill:21"/>
-            <text x="228" y="156" text-anchor="middle" font-family="Space Mono, monospace" font-size="20" font-weight="700" fill="var(--text)">92</text>
-          </svg>
-        </div> -->
-              <div class="p-visual">
-                <img
-                  src="images/resumeai.png"
-                  alt="ResumeAI Tailor Screenshot"
-                  loading="lazy"
-                />
-              </div>
-              <div class="p-body">
-                <span class="p-tag">AI · Productivity</span>
-                <h3 class="p-title">ResumeAI Tailor</h3>
-                <div class="p-role">AI resume optimizer</div>
-                <p class="p-blurb">
-                  Upload a resume, get an ATS-compatibility score and rewritten
-                  content tailored to the exact job you're chasing — then
-                  download the polished PDF.
-                </p>
-                <div class="p-meta">
-                  <!-- <div class="row"><b>Problem</b><span>Generic resumes get filtered out by ATS. Tailoring one by hand for every role is tedious and error-prone.</span></div> -->
-                  <!-- <div class="row"><b>Built</b><span>PDF upload and text extraction, LLM-driven analysis with actionable suggestions, and downloadable optimized-PDF generation — powered by Groq.</span></div> -->
-                </div>
-                <div class="pills">
-                  <span class="pill">Next.js</span
-                  ><span class="pill">TypeScript</span
-                  ><span class="pill">Tailwind CSS</span
-                  ><span class="pill">Groq API</span>
-                </div>
-                <div class="p-links">
-                  <a
-                    href="https://resume-ai-tailor.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="primary"
-                    data-ripple
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
-                    demo</a
-                  >
-                  <a
-                    href="https://github.com/shanxmnsr/resumeAI_tailor"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-ripple
-                    ><i class="fa-brands fa-github"></i>Source</a
-                  >
-                </div>
-              </div>
-            </article>
+            
 
             <!-- Web Automation Tool -->
             <!-- <article class="project reveal" data-tilt>
@@ -2535,11 +2547,11 @@
 
                   <div class="cc-txt">
                     <small>GitHub</small>
-                    <span>github.com/shanxmnsr</span>
+                    <span>github.com/shaniabuilds</span>
                   </div>
 
                   <a
-                    href="https://github.com/shanxmnsr"
+                    href="https://github.com/shaniabuilds"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="copy"
